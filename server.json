@@ -1,0 +1,66 @@
+{
+  "stock": [
+    {
+      "id": 1,
+      "amount": 3
+    },
+    {
+      "id": 2,
+      "amount": 5
+    },
+    {
+      "id": 3,
+      "amount": 2
+    },
+    {
+      "id": 4,
+      "amount": 1
+    },
+    {
+      "id": 5,
+      "amount": 5
+    },
+    {
+      "id": 6,
+      "amount": 10
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Tênis de Caminhada Leve Confortável",
+      "price": 179.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-adidas-run-falcon-feminino/14/NQQ-0553-014/NQQ-0553-014_detalhe1.jpg?ts=1580231627?resize=280:280"
+    },
+    {
+      "id": 2,
+      "title": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
+      "price": 139.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-olympikus-exact-feminino/79/D22-2018-879/D22-2018-879_detalhe1.jpg?ts=1584409241?resize=280:280"
+    },
+    {
+      "id": 3,
+      "title": "Tênis Adidas Duramo Lite 2.0",
+      "price": 219.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-feminino/72/HZM-1729-172/HZM-1729-172_detalhe1.jpg?ts=1574938914?resize=280:280"
+    },
+    {
+      "id": 5,
+      "title": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
+      "price": 139.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-feminino/15/HZM-1729-715/HZM-1729-715_detalhe1.jpg?ts=1583429518?resize=280:280"
+    },
+    {
+      "id": 6,
+      "title": "Tênis Adidas Duramo Lite 2.0",
+      "price": 219.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-adidas-asweego-feminino/62/NQQ-0370-162/NQQ-0370-162_detalhe1.jpg?ts=1580311021?resize=280:280"
+    },
+    {
+      "id": 4,
+      "title": "Tênis de Caminhada Leve Confortável",
+      "price": 179.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-adidas-run-falcon-feminino/26/NQQ-0553-226/NQQ-0553-226_detalhe1.jpg?ts=1577993363?resize=280:280"
+    }
+  ]
+}
