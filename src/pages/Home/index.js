@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { FlatList } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { formatPrice } from '../../util/format';
+
+import * as CartActions from '../../store/modules/cart/actions';
 
 import api from '../../services/api';
 
@@ -40,12 +43,9 @@ class Home extends Component {
   }
 
   handleAddProduct = (item) => {
-    const { dispatch } = this.props;
+    const { addToCart } = this.props;
 
-    dispatch({
-      type: 'ADD_TO_CART',
-      item,
-    });
+    addToCart(item);
   };
 
   renderProduct = ({ item }) => {
@@ -61,7 +61,7 @@ class Home extends Component {
         <AddButton onPress={() => this.handleAddProduct(item)}>
           <ProductAmount>
             <Feather name="shopping-cart" color="#454777" size={20} />
-            <ProductAmountText>0</ProductAmountText>
+            <ProductAmountText>{amount[item.id] || 0}</ProductAmountText>
           </ProductAmount>
           <AddButtonText>ADICIONAR</AddButtonText>
         </AddButton>
@@ -71,6 +71,7 @@ class Home extends Component {
 
   render() {
     const { products } = this.state;
+
     return (
       <Container>
         <HeaderContainer>
@@ -88,5 +89,15 @@ class Home extends Component {
     );
   }
 }
+const mapStateToProps = (state) => ({
+  amount: state.cart.reduce((amount, product) => {
+    amount[product.id] = product.amount;
 
-export default connect()(Home);
+    return amount;
+  }, {}),
+});
+
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(CartActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

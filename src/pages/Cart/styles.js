@@ -109,19 +109,23 @@ export const Order = styled.TouchableOpacity`
 `;
 
 export const OrderText = styled.Text`
-  color: #fff;
+  color: #eee;
   font-weight: bold;
   font-size: 14px;
   text-align: center;
 `;
 
 export const EmptyContainer = styled.View`
+  margin-top: 50px;
   align-items: center;
   justify-content: center;
+  height: 380px;
+  width: 380px;
 `;
 
 export const EmptyText = styled.Text`
   font-size: 24px;
   font-weight: bold;
-  margin-top: 18px;
+  margin-top: 20px;
+  color: #454777;
 `;
