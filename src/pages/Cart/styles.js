@@ -103,13 +103,13 @@ export const TotalAmount = styled.Text`
   font-weight: bold;
 `;
 export const Order = styled.TouchableOpacity`
-  background: red;
+  background: #454777;
   padding: 12px;
-  border-radius: 4px;
+  border-radius: 20px;
 `;
 
 export const OrderText = styled.Text`
-  color: #eee;
+  color: #ffbb00;
   font-weight: bold;
   font-size: 14px;
   text-align: center;
@@ -118,7 +118,7 @@ export const OrderText = styled.Text`
 export const EmptyContainer = styled.View`
   margin-top: 50px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 380px;
   width: 380px;
 `;

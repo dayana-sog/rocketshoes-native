@@ -6,6 +6,13 @@ export const Container = styled.SafeAreaView`
   background: #eee;
 `;
 
+export const InputSeach = styled.TextInput`
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 10px 20px 10px;
+`;
+
 export const HeaderContainer = styled.View`
   justify-content: flex-start;
   padding: 20px;

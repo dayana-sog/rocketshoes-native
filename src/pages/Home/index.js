@@ -11,6 +11,7 @@ import api from '../../services/api';
 
 import {
   Container,
+  InputSeach,
   HeaderContainer,
   LogoImg,
   Product,
@@ -50,6 +51,7 @@ class Home extends Component {
 
   renderProduct = ({ item }) => {
     const { amount } = this.props;
+    console.tron.log(amount);
 
     return (
       <Product key={item.id}>
@@ -78,6 +80,8 @@ class Home extends Component {
           <LogoImg />
         </HeaderContainer>
 
+        <InputSeach placeholder="buscar produtos" />
+
         <FlatList
           horizontal
           data={products}
@@ -89,6 +93,7 @@ class Home extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => ({
   amount: state.cart.reduce((amount, product) => {
     amount[product.id] = product.amount;

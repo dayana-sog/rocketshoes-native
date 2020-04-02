@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import LottieView from 'lottie-react-native';
+import PropTypes from 'prop-types';
 
 import { Feather } from '@expo/vector-icons';
+import bagError from '../../../bagError.json';
 
 import { formatPrice } from '../../util/format';
 
@@ -33,13 +36,13 @@ import {
   EmptyText,
 } from './styles';
 
-function Cart({ cart, removeFromCart, updateAmount, total }) {
+function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
   function increment(product) {
-    updateAmount(product.id, product.amount + 1);
+    updateAmountRequest(product.id, product.amount + 1);
   }
 
   function decrement(product) {
-    updateAmount(product.id, product.amount - 1);
+    updateAmountRequest(product.id, product.amount - 1);
   }
 
   return (
@@ -86,7 +89,7 @@ function Cart({ cart, removeFromCart, updateAmount, total }) {
         </>
       ) : (
         <EmptyContainer>
-          <Feather name="shopping-bag" size={64} color="#454777" />
+          <LottieView source={bagError} resizeMode="contain" autoPlay loop />
           <EmptyText>Seu carrinho está vazio.</EmptyText>
         </EmptyContainer>
       )}
